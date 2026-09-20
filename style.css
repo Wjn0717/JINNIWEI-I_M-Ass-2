@@ -1,0 +1,206 @@
+/* Import external Google Fonts for page typography */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #fdfaf3;
+    color: #2b2b2b;
+    padding: 0 16px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Header & Title */
+.page-title {
+    font-size: 42px;
+    color: #b54a2c;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #6b6b6b;
+    margin-bottom: 25px;
+}
+
+/* Navigation Bar */
+.main-nav {
+    background: #2b2b2b;
+    padding: 14px 0;
+    border-radius: 12px;
+    margin: 0 auto 30px;
+    max-width: 900px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #e07b3c;
+    color: #fff;
+}
+
+/* Two Column Layout */
+.tutorial-wrapper {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Video Player Area */
+.media-player {
+    flex: 1.5;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.media-player video {
+    width: 100%;
+    border-radius: 14px;
+    display: block;
+}
+
+.custom-controls {
+    display:flex;
+    gap:0.5rem;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top:0.5rem;
+}
+
+.custom-controls button{
+    padding:4px;
+    cursor:pointer;
+    border:none;
+    background:transparent;
+}
+
+/* Steps Sidebar */
+.steps-sidebar {
+    flex: 0.8;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(181, 74, 44, 0.12);
+    border: 1px solid #f1ece3;
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.steps-title {
+    color: #b54a2c;
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.step-card {
+    display: flex;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    background: #faf6ee;
+    border-left: 4px solid #e07b3c;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.step-card:hover {
+    background: #f3e7d2;
+    transform: translateX(4px);
+}
+
+.step-card.active {
+    background: #ffe4c7;
+    border-left-color: #b54a2c;
+}
+
+.step-number {
+    font-size: 22px;
+    color: #b54a2c;
+    min-width: 30px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.step-content h4 {
+    font-size: 16px;
+    color: #2b2b2b;
+    margin-bottom: 4px;
+}
+
+.step-content p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Footer */
+.page-footer {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    color: #777;
+    font-size: 14px;
+}
+
+.page-footer a {
+    color: #b54a2c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Responsive for mobile */
+@media (max-width:820px) {
+    .tutorial-wrapper {
+        flex-direction: column;
+    }
+    .steps-sidebar {
+        max-height: unset;
+    }
+}
+
+/* Player Controls & Progress Bar */
+
+#progress-bar-container {
+    flex-grow:1;
+    height:8px;
+    background:#ddd;
+    border-radius:4px;
+    cursor:pointer;
+}
+#progress-bar {
+    display:block;
+    height:100%;
+    width:0%;
+    background:#b54a2c;
+    border-radius:4px;
+}
+
