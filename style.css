@@ -1,4 +1,5 @@
-/* Import external Google Fonts for page typography */
+/* Import external Google Fonts for page typography.
+Font choice: Fredoka + Outfit selected for warm, approachable visual tone matching cooking tutorial content. */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap');
 
 * {
@@ -19,7 +20,8 @@ h1, h2, h3, h4 {
     letter-spacing: 0.5px;
 }
 
-/* Header & Title */
+/* Header & Title: Terracotta colour palette inspired by food tones.
+Centred heading clearly introduces the fried rice tutorial theme for first-time visitors. */
 .page-title {
     font-size: 42px;
     color: #b54a2c;
@@ -34,7 +36,8 @@ h1, h2, h3, h4 {
     margin-bottom: 25px;
 }
 
-/* Navigation Bar */
+/* Navigation Bar: Dark base with orange hover state.
+Hover colour creates immediate visual feedback for clickable links, matching the site’s food colour scheme. */
 .main-nav {
     background: #2b2b2b;
     padding: 14px 0;
@@ -64,7 +67,7 @@ h1, h2, h3, h4 {
     color: #fff;
 }
 
-/* Two Column Layout */
+/* Two-column layout: Watch video and read recipe steps side by side */
 .tutorial-wrapper {
     display: flex;
     gap: 2rem;
@@ -103,7 +106,7 @@ h1, h2, h3, h4 {
     background:transparent;
 }
 
-/* Steps Sidebar */
+/* Steps Sidebar: Scrollable panel to hold all cooking instructions */
 .steps-sidebar {
     flex: 0.8;
     background: #ffffff;
@@ -121,6 +124,7 @@ h1, h2, h3, h4 {
     font-size: 24px;
 }
 
+/* Step card: Hover/active states show interactivity; click jumps video to matching time stamp */
 .step-card {
     display: flex;
     gap: 14px;
@@ -162,7 +166,6 @@ h1, h2, h3, h4 {
     line-height: 1.4;
 }
 
-/* Footer */
 .page-footer {
     text-align: center;
     padding: 25px 0;
@@ -177,7 +180,7 @@ h1, h2, h3, h4 {
     font-weight: 500;
 }
 
-/* Responsive for mobile */
+/* Responsive for narrow screens, stacks layout vertically. Learned from MDN Web Docs */
 @media (max-width:820px) {
     .tutorial-wrapper {
         flex-direction: column;
@@ -188,7 +191,6 @@ h1, h2, h3, h4 {
 }
 
 /* Player Controls & Progress Bar */
-
 #progress-bar-container {
     flex-grow:1;
     height:8px;
@@ -202,5 +204,15 @@ h1, h2, h3, h4 {
     width:0%;
     background:#b54a2c;
     border-radius:4px;
+}
+
+.steps-sidebar.center-only {
+  margin: 0 auto;
+}
+.media-player.center-only {
+  margin: 0 auto;
+}
+.about-text{
+  padding: 2rem;
 }
 

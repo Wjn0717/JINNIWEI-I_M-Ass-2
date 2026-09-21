@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beef & Carrot Fried Rice Cooking Tutorial</title>
+    <title>Beef & Vegetable Fried Rice Cooking Tutorial</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- Header Section -->
+<!-- Header: Page title and subtitle -->
 <header>
-    <h1 class="page-title">Beef & Carrot Fried Rice</h1>
+    <h1 class="page-title">Beef & Vegetable Fried Rice</h1>
     <p class="page-subtitle">A simple, flavorful step-by-step cooking tutorial</p>
 </header>
 
-<!-- Navigation Section -->
+<!-- Navigation bar for view switching -->
 <nav class="main-nav">
     <ul>
-        <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link">Recipes</a></li>
-        <li><a href="#" class="nav-link">Tutorials</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
+        <!-- data-target stores identifier for JS content toggle -->
+        <li><a class="nav-link" data-target="home">Home</a></li>
+        <li><a class="nav-link" data-target="recipes">Recipes</a></li>
+        <li><a class="nav-link" data-target="tutorials">Tutorials</a></li>
+        <li><a class="nav-link" data-target="about">About</a></li>
     </ul>
 </nav>
 
@@ -28,36 +29,42 @@
     <div class="tutorial-wrapper">
         <!-- Video Player Area -->
         <div class="media-player">
+            <!-- Self-recorded cooking video hosted on archive.org. 
+            Background Music: "Cooking" by The_Mountain, Pixabay | https://pixabay.com/music/happy-childrens-tunes-cooking-483306/ | Pixabay royalty-free license -->
             <video src="https://ia600408.us.archive.org/13/items/23df-535efd-86b-601951dbbb-8ea-1622b-2-raw/23df535efd86b601951dbbb8ea1622b2_raw.mp4" id="my-video"></video>
             <div class="custom-controls">
                 <button id="play-pause-button">
                     <img src="play.png" alt="" id="play-pause-img" />
                 </button>
                 <button id="mute-unmute-button">
-                    <img src="volume.png" alt="" id="mute-unmute-img" />
+                    <img src="audio.png" alt="" id="mute-unmute-img" />
                 </button>
                 <button id="fullscreen-button">
                     <img src="fullscreen.png" alt="" id="fullscreen-img" />
                 </button>
+                <!-- Progress bar: click to jump to corresponding time in fried rice tutorial video -->
                 <div id="progress-bar-container"><span id="progress-bar"></span></div>
             </div>
         </div>
 
-        <!-- Recipe Steps Sidebar -->
+        <!-- Sidebar: cooking step list. Design decision: Pair video playback with written instructions. Cooking learners can read clear step-by-step guidance and jump the 
+         tutorial video to the matching moment using the data-time attribute. Reference: Learned HTML DOM structure, custom data attributes, DOM click events and HTML5 video 
+         currentTime property from W3Schools HTML DOM page. YouTube JS media player tutorials helped implement video seeking functionality. -->
         <div id="steps" class="steps-sidebar">
             <h3 class="steps-title">Cooking Steps</h3>
+            <!-- Step card, data-time stores target timestamp, click to seek the beef fried rice tutorial video -->
             <div class="step-card" data-time="0">
                 <div class="step-number">01</div>
                 <div class="step-content">
-                    <h4>Prepare ingredients</h4>
-                    <p>Prepare beef, egg, carrot, cooked rice and seasonings.</p>
+                    <h4>Peel all vegetables</h4>
+                    <p>Peel carrot, potato and pumpkin.</p>
                 </div>
             </div>
             <div class="step-card" data-time="6">
                 <div class="step-number">02</div>
                 <div class="step-content">
-                    <h4>Dice carrot</h4>
-                    <p>Wash carrot and cut into small cubes.</p>
+                    <h4>Dice vegetables</h4>
+                    <p>Wash vegetables and cut into small cubes.</p>
                 </div>
             </div>
             <div class="step-card" data-time="14">
@@ -71,7 +78,7 @@
                 <div class="step-number">04</div>
                 <div class="step-content">
                     <h4>Make seasoning sauce</h4>
-                    <p>Mix soy sauce, oyster sauce and pepper.</p>
+                    <p>Mix soy sauce, oyster sauce and chilli powder and black pepper.</p>
                 </div>
             </div>
             <div class="step-card" data-time="26">
@@ -84,33 +91,41 @@
             <div class="step-card" data-time="30">
                 <div class="step-number">06</div>
                 <div class="step-content">
-                    <h4>Scramble eggs</h4>
-                    <p>Heat pan, fry beaten eggs and set aside.</p>
+                    <h4>Scramble eggs & add rice</h4>
+                    <p>Heat pan, fry beaten eggs, add cooked rice and mix well.</p>
                 </div>
             </div>
-            <div class="step-card" data-time="38">
+            <div class="step-card" data-time="45">
                 <div class="step-number">07</div>
                 <div class="step-content">
-                    <h4>Stir fry carrot</h4>
-                    <p>Add diced carrot into pan and stir fry briefly.</p>
+                    <h4>Stir fry vegetables</h4>
+                    <p>Add diced vegetables into pan and stir fry briefly.</p>
                 </div>
             </div>
-            <div class="step-card" data-time="46">
+            <div class="step-card" data-time="52">
                 <div class="step-number">08</div>
                 <div class="step-content">
-                    <h4>Add rice & beef</h4>
-                    <p>Add rice, beef and egg. Stir well and serve.</p>
+                    <h4>Cook beef & finish</h4>
+                    <p>Add beef, stir-fry on high heat. Garnish with spring onion and serve.</p>
                 </div>
             </div>
         </div>
     </div>
+ <!-- About section, hidden by default with inline style -->   
+<div class="about-text" style="display:none; text-align:center; max-width:700px; margin:3rem auto;">
+    <h2>About Beef & Vegetable Fried Rice</h2>
+    <p>This simple homemade fried rice uses marinated beef, carrot and potato. It’s a quick and easy meal to make at home.</p>
+    <p>I made this webpage with a custom video player. You can click the step cards to jump straight to the relevant part of the cooking video.</p>
+</div>
 </main>
 
-<!-- Footer -->
-<footer id="about" class="page-footer">
+<!-- Page footer: icon attribution -->
+<footer class="page-footer">
     <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
 </footer>
 
 <script src="script.js" defer></script>
+<!-- AI tool (Doubao, https://www.doubao.com/chat/) was used as a support tool: to explain code concepts, help debug issues, supply resource links 
+ and assist with English translation. All design decisions, feature ideas and media assets are my own. -->
 </body>
 </html>
