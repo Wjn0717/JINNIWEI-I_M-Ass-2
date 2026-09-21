@@ -132,6 +132,7 @@ navLinks.forEach(link => {
             videoWrap.classList.add("center-only");
         }else if(target === "about"){
             videoWrap.style.display = "none";
+            stepWrap.style.display = "none";
             aboutText.style.display = "block";
         }
     })
